@@ -1,5 +1,5 @@
 {
-    "name": "harshadeva/interface-maker",
+    "name": "harshadeva/interface-generator",
     "description": "This package will make repository and interface file , then bind that to service providers with one artisan command",
     "keywords": ["interface","maker","repository","binder","service provider"],
     "type": "library",
