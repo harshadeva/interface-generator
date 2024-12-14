@@ -1,0 +1,9 @@
+<?php
+
+namespace App\Repositories\{{name}};
+
+use App\Repositories\CrudRepositoryInterface;
+
+interface {{name}}RepositoryInterface
+{
+}

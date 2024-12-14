@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Repositories\{{name}};
+
+use App\Models\{{name}};
+use App\Repositories\CrudRepository;
+
+class {{name}}Repository implements {{name}}RepositoryInterface
+{
+    public function __construct({{name}} $model)
+    {
+        parent::__construct($model);
+    }
+}
