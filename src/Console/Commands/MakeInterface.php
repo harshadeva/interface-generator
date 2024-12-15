@@ -142,16 +142,25 @@ class MakeInterface extends Command
 
     protected function getRepositoryStub()
     {
-        return $this->files->get(__DIR__ . '/../../../stubs/repository.stub');
+        $publishedStubPath = base_path('stubs/interface-generator/repository.stub');
+        $unpublishedStubPath = __DIR__ . '/../../../stubs/repository.stub';
+        if(file_exists($publishedStubPath)) return $this->files->get($publishedStubPath);
+        return $this->files->get($unpublishedStubPath);
     }
 
     protected function getInterfaceStub()
     {
-        return $this->files->get(__DIR__ . '/../../../stubs/interface.stub');
+        $publishedStubPath = base_path('stubs/interface-generator/interface.stub');
+        $unpublishedStubPath = __DIR__ . '/../../../stubs/interface.stub';
+        if(file_exists($publishedStubPath)) return $this->files->get($publishedStubPath);
+        return $this->files->get($unpublishedStubPath);
     }
    
     protected function getProviderStub()
     {
-        return $this->files->get(__DIR__ . '/../../../stubs/provider.stub');
+        $publishedStubPath = base_path('stubs/provider.stub');
+        $unpublishedStubPath = __DIR__ . '/../../../stubs/provider.stub';
+        if(file_exists($publishedStubPath)) return $this->files->get($publishedStubPath);
+        return $this->files->get($unpublishedStubPath);
     }
 }
