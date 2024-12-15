@@ -1,6 +1,6 @@
 {
     "name": "harshadeva/interface-generator",
-    "description": "This package will make repository and interface file , then bind that to service providers with one artisan command",
+    "description": "Simplify Laravel development by generating repository and interface files with automatic service provider binding",
     "keywords": ["interface","maker","repository","binder","service provider"],
     "type": "library",
     "license": "MIT",
