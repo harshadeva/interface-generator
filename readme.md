@@ -59,6 +59,31 @@ $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
 
 ---
 
+## **New Feature: Publish Stubs**
+
+The `interface-generator` package now supports publishing stub files for customizing the generated files. You can publish the stubs either using the custom Artisan command `interface-generator:stub-publish` or Laravel’s default `stub:publish` command.
+
+### **What Happens When You Publish Stubs:**
+- The stub files will be published to the `stubs/interface-generator` directory.
+- These stubs serve as templates for generating repository interfaces and implementations, allowing you to customize the file structure, contents, or other aspects as needed.
+
+### **How to Publish Stubs:**
+
+1. **Using the Custom Command:**
+   ```bash
+   php artisan interface-generator:stub-publish
+   ```
+
+2. **Using Laravel's Default Command:**
+   If the package is already installed, you can publish the stubs via Laravel’s default `stub:publish` command:
+   ```bash
+   php artisan stub:publish
+   ```
+
+The published stubs will be located in the `stubs/interface-generator` directory, and you can modify them to suit your project’s needs. These stubs will be used as the base for creating files when running the `make:interface` command.
+
+---
+
 ## **Customizing the Output**
 
 If you want to customize the directory structure or namespace, you can modify the generated files after they are created.
